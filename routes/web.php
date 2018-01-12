@@ -18,3 +18,18 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/addCompte',array(
+    'as'=>'addCompte',
+    'uses'=>'Controller@addCompte'
+));
+
+Route::post('/newCompteService',array(
+    'as'=>'newCompteService',
+    'uses'=>'Controller@newCompteService'
+));
+
+Route::get('/Transfert',array(
+    'as'=>'Transfert',
+    'uses'=>'Controller@Transfert'
+));
